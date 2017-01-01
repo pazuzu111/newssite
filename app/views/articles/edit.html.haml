@@ -1,5 +1,6 @@
-%h2 edit
+.col-md-6.col-md-offset-3	
+	%h2 edit
+	=image_tag @article.image.url(:medium)
+	= render "form"
 
-= render "form"
-
-= link_to "Cancel", article_path
+	= link_to "Cancel", article_path
