@@ -1,11 +1,14 @@
-= image_tag @article.image.url(:medium)
+.col-md-8.col-md-offset-2
+	.panel1.color-layer1
+		= image_tag @article.image.url
+	.panel-body.color-layer1
+		%h1= @article.title
+		%p= @article.description
+	.color-layer1
+		%p
+		submitted by
+		%p= @article.user.email
 
-%h1= @article.title
-%p= @article.description
-%p
-submitted by
-%p= @article.user.email
-
-= link_to "Back", root_path
-= link_to "Edit", edit_article_path
-= link_to "Delete", article_path, method: :delete, data: {confirm: "Are you sure?"}
+		= link_to "Back", root_path
+		= link_to "Edit", edit_article_path
+		= link_to "Delete", article_path, method: :delete, data: {confirm: "Are you sure?"}

@@ -1,6 +1,10 @@
-.col-md-6.col-md-offset-3	
-	%h2 edit
-	=image_tag @article.image.url(:medium)
-	= render "form"
-
-	= link_to "Cancel", article_path
+#edit_page.col-md-8.col-md-offset-2
+	.row
+		.panel1.panel-default
+			.box
+				%h1 Edit Your article
+			.panel-body
+				.current_image
+					%strong.center by
+					= image_tag @article.image.url(:medium)
+				= render 'form'

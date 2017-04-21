@@ -1,3 +1,8 @@
-- @articles.each do |article|
-	= link_to (image_tag article.image.url(:medium)), article
-	%h2= link_to article.title, article
+
+#articles.transitions-enabled
+	.color-layer1.container
+		- @articles.each do |article|
+			.box.panel1
+				= link_to (image_tag article.image.url), article
+				.panel-body.color-layer1
+					%h2= link_to article.title, article
