@@ -7,9 +7,8 @@ class ArticlesController < ApplicationController
 	end
 
 	def show
-
-		
 	end
+
 	def new
 		@article = current_user.articles.build
 	end
@@ -25,13 +24,12 @@ class ArticlesController < ApplicationController
 	end
  
 	def edit
-	
 	end
 
 
 	def update
 		if @article.update(article_params)
-			redirect_to @article, notice: " successfully updated"
+			redirect_to @article, notice: "successfully updated"
 		else
 			render 'edit'
 		end
@@ -46,7 +44,6 @@ class ArticlesController < ApplicationController
 
 	def article_params
 		params.require(:article).permit(:title, :description, :image)
-	
 	end
 
 	def find_article
